@@ -1,0 +1,13 @@
+megaphone
+phonebook
+*~
+*.o
+*.a
+a.out
+a.out.dSYM
+*dSYM
+\#*\#
+.vscode/
+.DS_STORE
+.\#*
+output_valgrind
