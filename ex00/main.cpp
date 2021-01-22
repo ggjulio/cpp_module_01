@@ -6,7 +6,7 @@
 /*   By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/21 11:04:14 by juligonz          #+#    #+#             */
-/*   Updated: 2021/01/21 11:46:05 by juligonz         ###   ########.fr       */
+/*   Updated: 2021/01/23 00:37:57 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,4 +21,5 @@ int main()
 	ponyOnTheHeap->say();
 	
 	delete ponyOnTheHeap;
+	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/21 11:05:52 by juligonz          #+#    #+#             */
-/*   Updated: 2021/01/21 11:44:33 by juligonz         ###   ########.fr       */
+/*   Updated: 2021/01/23 00:34:23 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ Pony::~Pony(){
 
 void Pony::say()
 {
-	std::cout << ">> My name is " << _name << "! " << std::endl
-		<< "\tMy mane is " << _color
+	std::cout << ">> I'm " << _name << " !"
+		<< "  My mane is " << _color
 		<< ", i'm on the "<< _where << " !!" << std::endl;	
 }
