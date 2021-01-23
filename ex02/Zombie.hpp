@@ -6,7 +6,7 @@
 /*   By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/21 12:00:07 by juligonz          #+#    #+#             */
-/*   Updated: 2021/01/21 13:42:55 by juligonz         ###   ########.fr       */
+/*   Updated: 2021/01/23 02:08:42 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,21 @@
 
 # include <string>
 
-typedef enum e_zombieType { Walker, Runner, Crawler, Armored } ZombieType;
+typedef enum e_zombieType {None, Walker, Runner, Crawler, Armored, } ZombieType;
 
 class Zombie{
-	std:string _name;
-	ZombieType _type;
+	std::string _name;
 
 public:
+	ZombieType type;
+	
+	Zombie(std::string name);
 	Zombie(std::string name, ZombieType type);
 	~Zombie();
-	void advert();
+	
+	std::string getName();
+	std::string typeToString(ZombieType type);
+	void announce();
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/21 12:01:53 by juligonz          #+#    #+#             */
-/*   Updated: 2021/01/21 13:39:37 by juligonz         ###   ########.fr       */
+/*   Updated: 2021/01/23 02:48:35 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,15 @@
 
 int main()
 {
+	Zombie * z = ZombieEvent::newZombie("ewdew");
+
+	Zombie *de = ZombieEvent::randomChump();
+	Zombie *fr = ZombieEvent::randomChump();
+	Zombie *fr3 = ZombieEvent::randomChump();
 	
+	delete z;
+	delete de;
+	delete fr;
+	delete fr3;
+	return (0);
 }
