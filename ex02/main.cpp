@@ -6,7 +6,7 @@
 /*   By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/21 12:01:53 by juligonz          #+#    #+#             */
-/*   Updated: 2021/01/24 10:54:52 by juligonz         ###   ########.fr       */
+/*   Updated: 2021/01/24 15:49:45 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,19 +15,15 @@
 
 int main()
 {
-	Zombie * z = ZombieEvent::newZombie("ewdew");
+	Zombie stackRandomName = Zombie();
+	Zombie stack = Zombie("__Eminem__", Armored);
 
-	Zombie *de = ZombieEvent::randomChump();
-	Zombie *fr = ZombieEvent::randomChump();
-	Zombie *fr3 = ZombieEvent::randomChump();
-	Zombie *fr4 = ZombieEvent::randomChump();
-	Zombie *fr5 = ZombieEvent::randomChump();
-	
-	delete z;
-	delete de;
-	delete fr;
-	delete fr3;
-	delete fr4;
-	delete fr5;
+	Zombie *heap = ZombieEvent::newZombie("__Marvin__");
+	Zombie *heapRandomName = ZombieEvent::randomChump();
+	ZombieEvent::setZombieType(heap, Walker);
+	heapRandomName->setType(Runner);
+
+	delete heapRandomName;
+	delete heap;
 	return (0);
 }

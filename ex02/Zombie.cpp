@@ -6,7 +6,7 @@
 /*   By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/21 12:01:31 by juligonz          #+#    #+#             */
-/*   Updated: 2021/01/24 12:30:16 by juligonz         ###   ########.fr       */
+/*   Updated: 2021/01/24 15:48:10 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,10 @@
 
 #include <iostream>
 #include <iomanip>
+#include <ctime>
 
 Zombie::Zombie(): _type(None){
-	if (_seeded == false)
-		_seeded = _generateRandomSeed();
-	_name = 
+	_name = generateRandomName();
 	announce();
 }
 
@@ -31,16 +30,17 @@ Zombie::Zombie(std::string name, ZombieType type): _name(name), _type(type){
 }
 
 Zombie::~Zombie(){
-	std::cout << "<"+_name+"("
-		<< getZombieTypeToString() << ")> DIED" << std::endl;
+	std::cout << "<" << std::setfill(' ')<< std::setw(20) << _name << "("
+		<< std::setfill(' ')<< std::setw(10) << getTypeToString() << ")> DIED" << std::endl;
 }
 
 void Zombie::announce(){
-	std::cout << "<"+_name+"("
-		<< getZombieTypeToString() << ")> I love popcorn." << std::endl;
+	std::cout << "<" << std::setfill(' ')<< std::setw(20)<< _name << "("
+		<< std::setfill(' ')<< std::setw(10) << getTypeToString()
+		<< ")> I love popcorn." << std::endl;
 }
 
-std::string Zombie::getZombieTypeToString()
+std::string Zombie::getTypeToString()
 {
 	const char *typeStr[5] = {"None","Walker","Runner", "Crawler","Armored"};
 	return typeStr[_type];
@@ -48,17 +48,36 @@ std::string Zombie::getZombieTypeToString()
 
 std::string Zombie::getName(){
 	return _name;
+
+}
+std::string Zombie::generateRandomName(){
+	const char *attr[] = {"meaningful","evil","angry", "brave","clever","sad",
+	"confident","crazy","distracted","hopeful","lucid","naughty","strange","silly"};
+	const char *name[] = {"allen","bob","austin","beaver","bell","bouman","buck",
+	"carver","carson","cohen","clarke","cray","darwin","davinci","dijkstra","euclid",
+	"euler","fermi","galileo","haslett","hawking","herschell","hopper","jepsen"};
+
+	if (_seeded == false)
+	{
+		srand (time(NULL));
+		_seeded = true;
+	}
+	return (
+		std::string(attr[rand()%(sizeof(attr)/8)]) + "_" + std::string(name[rand()%(sizeof(name)/8)]));
 }
 
-ZombieType	Zombie::getZombieType(){
+ZombieType	Zombie::getType(){
 	return _type;
 }
 
-void	Zombie::setZombieType(ZombieType type){
+void	Zombie::setType(ZombieType type){
 	if (_type == None)
 		_type = type;
 }
-bool	Zombie::_generateRandomSeed(){
-	srand (time(NULL));
-	return true;
-}
+
+// bool	Zombie::_generateRandomSeed(){
+// 	srand (time(NULL));
+// 	return true;
+// }
+
+bool Zombie::_seeded = false;

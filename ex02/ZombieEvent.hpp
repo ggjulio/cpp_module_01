@@ -6,7 +6,7 @@
 /*   By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/23 01:19:16 by juligonz          #+#    #+#             */
-/*   Updated: 2021/01/24 11:37:16 by juligonz         ###   ########.fr       */
+/*   Updated: 2021/01/24 15:45:58 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,19 +17,12 @@
 
 class ZombieEvent
 {
-private:
-
 public:
-	ZombieEvent();
-	~ZombieEvent();
-
 	static Zombie * newZombie(std::string name);
-	
-	static void setZombieType(Zombie & zombie, ZombieType type);
+	static Zombie * newZombie(std::string name, ZombieType type);
+
+	static void		setZombieType(Zombie * zombie, ZombieType type);
 	static Zombie * randomChump(void);
 };
-
-
-
 
 #endif
