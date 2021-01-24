@@ -6,14 +6,14 @@
 /*   By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/23 02:01:42 by juligonz          #+#    #+#             */
-/*   Updated: 2021/01/23 02:52:05 by juligonz         ###   ########.fr       */
+/*   Updated: 2021/01/24 12:11:58 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ZombieEvent.hpp"
 
 void ZombieEvent::setZombieType(Zombie & zombie, ZombieType type){
-	zombie.type = type;
+	zombie.setZombieType(type);
 }
 
 Zombie * ZombieEvent::newZombie(std::string name){
@@ -22,7 +22,8 @@ Zombie * ZombieEvent::newZombie(std::string name){
 
 #include <iostream>
 #include <stdlib.h>
-#include <time.h>
+// #include <time.h>
+#include <ctime>
 
 Zombie * ZombieEvent::randomChump(void){
 	const char *attr[] = {"meaningful","evil","angry", "brave","clever","sad",
@@ -31,7 +32,6 @@ Zombie * ZombieEvent::randomChump(void){
 	"carver","carson","cohen","clarke","cray","darwin","davinci","dijkstra","euclid",
 	"euler","fermi","galileo","haslett","hawking","herschell","hopper","jepsen"};
 
-	// std::cout << rand(time(NULL)) % 5 <<std::endl<<std::endl sizeof(name)/8;
 	return newZombie(
 		std::string(attr[rand()%(sizeof(attr)/8)]) + "_" + std::string(name[rand()%(sizeof(name)/8)]));	
 }
