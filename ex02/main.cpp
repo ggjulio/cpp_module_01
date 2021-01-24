@@ -6,7 +6,7 @@
 /*   By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/21 12:01:53 by juligonz          #+#    #+#             */
-/*   Updated: 2021/01/24 15:49:45 by juligonz         ###   ########.fr       */
+/*   Updated: 2021/01/25 00:05:34 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ int main()
 
 	Zombie *heap = ZombieEvent::newZombie("__Marvin__");
 	Zombie *heapRandomName = ZombieEvent::randomChump();
+	
 	ZombieEvent::setZombieType(heap, Walker);
 	heapRandomName->setType(Runner);
 

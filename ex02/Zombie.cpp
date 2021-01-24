@@ -6,7 +6,7 @@
 /*   By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/21 12:01:31 by juligonz          #+#    #+#             */
-/*   Updated: 2021/01/24 15:48:10 by juligonz         ###   ########.fr       */
+/*   Updated: 2021/01/24 23:57:38 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 #include <iostream>
 #include <iomanip>
 #include <ctime>
+#include <cstdlib>
 
-Zombie::Zombie(): _type(None){
-	_name = generateRandomName();
+Zombie::Zombie(): _name(generateRandomName()), _type(None){
 	announce();
 }
 
@@ -48,8 +48,8 @@ std::string Zombie::getTypeToString()
 
 std::string Zombie::getName(){
 	return _name;
-
 }
+
 std::string Zombie::generateRandomName(){
 	const char *attr[] = {"meaningful","evil","angry", "brave","clever","sad",
 	"confident","crazy","distracted","hopeful","lucid","naughty","strange","silly"};
@@ -74,10 +74,5 @@ void	Zombie::setType(ZombieType type){
 	if (_type == None)
 		_type = type;
 }
-
-// bool	Zombie::_generateRandomSeed(){
-// 	srand (time(NULL));
-// 	return true;
-// }
 
 bool Zombie::_seeded = false;

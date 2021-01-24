@@ -6,7 +6,7 @@
 /*   By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/21 12:00:07 by juligonz          #+#    #+#             */
-/*   Updated: 2021/01/24 15:47:25 by juligonz         ###   ########.fr       */
+/*   Updated: 2021/01/24 23:53:43 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,13 +31,14 @@ public:
 	~Zombie();
 
 	std::string getName();
-	std::string generateRandomName();
 	
 	ZombieType	getType();
 	std::string getTypeToString();
 	void		setType(ZombieType type);
 
 	void		announce();
+	
+	static std::string	generateRandomName();
 };
 
 #endif
