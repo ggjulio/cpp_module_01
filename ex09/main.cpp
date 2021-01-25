@@ -6,7 +6,7 @@
 /*   By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/25 15:27:25 by juligonz          #+#    #+#             */
-/*   Updated: 2021/01/25 16:01:01 by juligonz         ###   ########.fr       */
+/*   Updated: 2021/01/25 21:20:05 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,14 @@
 
 int main()
 {
-	Logger l = Logger("myfile");
-	l.log("myfile", "coucou");
+	std::string filename = "myfile";
+	Logger l (filename);
+	
+	l.log(filename, "file 0");
+	l.log(filename, "file 1");
+	l.log("console", "STDOUT :message 0");
+	l.log(filename, "file 2");
+	l.log("console", "STDOUT :message 1");
+	l.log(filename, "file 3");
 	return 0;
 }
