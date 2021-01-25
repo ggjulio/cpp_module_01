@@ -6,7 +6,7 @@
 /*   By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/25 03:08:05 by juligonz          #+#    #+#             */
-/*   Updated: 2021/01/25 14:31:00 by juligonz         ###   ########.fr       */
+/*   Updated: 2021/01/26 00:01:14 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,14 +39,16 @@ int main(int ac, char **av)
 	if (ac == 4)
 	{
 		in.open(av[1]);
-		out.open(std::string(av[1]) + ".replace");
-		if (in.is_open() && out.is_open())
+		if (in.is_open())
 		{
-			replace(in, out, av[2], av[3]);
-			return 0;
+			out.open((std::string(av[1]) + std::string(".replace")).c_str());
+			if (out.is_open())
+			{
+				replace(in, out, av[2], av[3]);
+				return 0;
+			}
 		}
-		else
-			std::cout << "Can't open file" << std::endl;
+		std::cout << "Can't open file" << std::endl;
 	}
 	else
 		std::cout << "Bad args." << std::endl;
