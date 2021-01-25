@@ -6,7 +6,7 @@
 /*   By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/25 15:27:29 by juligonz          #+#    #+#             */
-/*   Updated: 2021/01/25 15:42:17 by juligonz         ###   ########.fr       */
+/*   Updated: 2021/01/25 15:50:00 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,15 +22,14 @@ private:
 
 	void _logToConsole(std::string log);
 	void _logToFile(std::string log);
-	void _makeLogEntry(std::string message);
-	
-	
-	void _displayTimestamp( void );
-
-
+	std::string _makeLogEntry(std::string message);
+		
 public:
 	Logger(std::string filename);
 	~Logger();
+	
+	void log(std::string const &dest, std::string const &message);
+
 };
 
-#endif LOGGER_H
+#endif

@@ -6,12 +6,13 @@
 /*   By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/25 14:44:44 by juligonz          #+#    #+#             */
-/*   Updated: 2021/01/25 15:25:06 by juligonz         ###   ########.fr       */
+/*   Updated: 2021/01/25 15:55:14 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Human.hpp"
 #include <iostream>
+#include <stdexcept>
 
 void Human::meleeAttack(std::string const& target){
 	std::cout << "melee attack  : " << target << std::endl;
