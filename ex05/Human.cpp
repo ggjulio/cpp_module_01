@@ -1,29 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ZombieHorde.hpp                                    :+:      :+:    :+:   */
+/*   Human.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/24 15:53:36 by juligonz          #+#    #+#             */
-/*   Updated: 2021/01/25 00:57:31 by juligonz         ###   ########.fr       */
+/*   Created: 2021/01/25 00:51:41 by juligonz          #+#    #+#             */
+/*   Updated: 2021/01/25 01:27:17 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HORDE_H
-# define ZOMBIE_HORDE_H
+#include "Human.hpp"
 
-# include "Zombie.hpp"
+#include <iostream>
 
-class ZombieHorde
-{
-private:
-	Zombie * _horde;
+Human::Human(){
+	std::cout << "Human Constructed" << std::endl;
+}
 
-public:
-	ZombieHorde(size_t n);
-	~ZombieHorde();
+Human::~Human(){
+	std::cout << "Human Destroyed" << std::endl;
+}
 
-};
+Brain & Human::getBrain(){
+	return _brain;
+}
 
-#endif
+Brain * Human::identify(){
+	return &_brain;
+}

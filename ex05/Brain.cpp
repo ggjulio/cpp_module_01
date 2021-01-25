@@ -1,29 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ZombieHorde.hpp                                    :+:      :+:    :+:   */
+/*   Brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/24 15:53:36 by juligonz          #+#    #+#             */
-/*   Updated: 2021/01/25 00:57:31 by juligonz         ###   ########.fr       */
+/*   Created: 2021/01/25 00:44:27 by juligonz          #+#    #+#             */
+/*   Updated: 2021/01/25 01:26:19 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HORDE_H
-# define ZOMBIE_HORDE_H
+#include "Brain.hpp"
 
-# include "Zombie.hpp"
+#include <iostream>
 
-class ZombieHorde
-{
-private:
-	Zombie * _horde;
+Brain::Brain(): _isEmpty(true){
+	std::cout << "Brain Constructed" << std::endl;
+}
 
-public:
-	ZombieHorde(size_t n);
-	~ZombieHorde();
+Brain::~Brain(){
+	std::cout << "Brain Destroyed" << std::endl;
+}
 
-};
+Brain * Brain::identify(){
+	return this;
+}
 
-#endif
+bool Brain::getIsEmpty(){
+	return _isEmpty;
+}

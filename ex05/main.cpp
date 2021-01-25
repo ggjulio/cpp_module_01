@@ -1,29 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ZombieHorde.hpp                                    :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/24 15:53:36 by juligonz          #+#    #+#             */
-/*   Updated: 2021/01/25 00:57:31 by juligonz         ###   ########.fr       */
+/*   Created: 2021/01/25 00:48:34 by juligonz          #+#    #+#             */
+/*   Updated: 2021/01/25 00:49:23 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HORDE_H
-# define ZOMBIE_HORDE_H
+#include <iostream>
+#include "Human.hpp"
 
-# include "Zombie.hpp"
-
-class ZombieHorde
+int main()
 {
-private:
-	Zombie * _horde;
-
-public:
-	ZombieHorde(size_t n);
-	~ZombieHorde();
-
-};
-
-#endif
+	Human	bob;
+	
+	std::cout << bob.identify() << std::endl;
+	std::cout << bob.getBrain().identify() << std::endl;
+}

@@ -1,29 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ZombieHorde.hpp                                    :+:      :+:    :+:   */
+/*   Human.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/24 15:53:36 by juligonz          #+#    #+#             */
-/*   Updated: 2021/01/25 00:57:31 by juligonz         ###   ########.fr       */
+/*   Created: 2021/01/25 00:50:48 by juligonz          #+#    #+#             */
+/*   Updated: 2021/01/25 01:29:59 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HORDE_H
-# define ZOMBIE_HORDE_H
 
-# include "Zombie.hpp"
+#ifndef HUMAN_H
+# define HUMAN_H
 
-class ZombieHorde
+# include "Brain.hpp"
+
+class Human
 {
 private:
-	Zombie * _horde;
+	Brain _brain;
 
 public:
-	ZombieHorde(size_t n);
-	~ZombieHorde();
+	Human();
+	~Human();
 
+	Brain & getBrain();
+
+	Brain * identify();
 };
 
 #endif
