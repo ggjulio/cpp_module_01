@@ -6,7 +6,7 @@
 /*   By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/25 00:44:27 by juligonz          #+#    #+#             */
-/*   Updated: 2021/01/25 01:54:54 by juligonz         ###   ########.fr       */
+/*   Updated: 2021/01/25 02:04:16 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 #include <iostream>
 
-Brain::Brain(): _isEmpty(true){
+Brain::Brain(){
 	std::cout << "Brain Constructed" << std::endl;
 }
 
@@ -24,8 +24,4 @@ Brain::~Brain(){
 
 Brain const * Brain::identify() const{
 	return this;
-}
-
-bool Brain::getIsEmpty(){
-	return _isEmpty;
 }

@@ -6,7 +6,7 @@
 /*   By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/25 00:44:06 by juligonz          #+#    #+#             */
-/*   Updated: 2021/01/25 01:55:28 by juligonz         ###   ########.fr       */
+/*   Updated: 2021/01/25 02:04:43 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,12 @@
 class Brain
 {
 private:
-	bool _isEmpty;
 
 public:
 	Brain();
 	~Brain();
 
 	Brain const * identify() const;
-
-	bool getIsEmpty();
 };
 
 #endif
