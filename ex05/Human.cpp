@@ -6,7 +6,7 @@
 /*   By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/25 00:51:41 by juligonz          #+#    #+#             */
-/*   Updated: 2021/01/25 01:46:15 by juligonz         ###   ########.fr       */
+/*   Updated: 2021/01/25 02:11:42 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,5 @@ const Brain & Human::getBrain(){
 }
 
 Brain const * Human::identify(){
-	return &_brain;
+	return _brain.identify();
 }
