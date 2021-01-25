@@ -1,5 +1,7 @@
 megaphone
 phonebook
+sed
+test.REPLACE
 *~
 *.o
 *.a
