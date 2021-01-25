@@ -6,7 +6,7 @@
 /*   By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/25 15:27:25 by juligonz          #+#    #+#             */
-/*   Updated: 2021/01/25 15:57:03 by juligonz         ###   ########.fr       */
+/*   Updated: 2021/01/25 16:01:01 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,6 @@
 int main()
 {
 	Logger l = Logger("myfile");
-	l.log("file", "coucou");
+	l.log("myfile", "coucou");
 	return 0;
 }

@@ -6,7 +6,7 @@
 /*   By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/25 15:27:27 by juligonz          #+#    #+#             */
-/*   Updated: 2021/01/25 15:55:02 by juligonz         ###   ########.fr       */
+/*   Updated: 2021/01/25 16:03:03 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,9 +37,14 @@ std::string	Logger::_makeLogEntry(std::string message){
 }
 
 void Logger::log(std::string const &dest, std::string const &message){
-	if (dest == "file")
-		return _logToFile(_makeLogEntry(message));
-	else
-		return _logToConsole(_makeLogEntry(message));
+	void Logger::(*console)(std::string log) = &_logToConsole;
 	
+	if (dest == _filename)
+		// return _logToFile(_makeLogEntry(message));
+		return  (_makeLogEntry(message));
+	if (dest == "cout")
+		// return _logToConsole(_makeLogEntry(message));
+		return ;
+	throw std::invalid_argument(
+		"\nUnknown destination:\n\tvalue should be 'cout' or the filename");
 }
