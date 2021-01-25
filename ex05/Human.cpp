@@ -6,7 +6,7 @@
 /*   By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/25 00:51:41 by juligonz          #+#    #+#             */
-/*   Updated: 2021/01/25 01:27:17 by juligonz         ###   ########.fr       */
+/*   Updated: 2021/01/25 01:46:15 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,10 @@ Human::~Human(){
 	std::cout << "Human Destroyed" << std::endl;
 }
 
-Brain & Human::getBrain(){
+const Brain & Human::getBrain(){
 	return _brain;
 }
 
-Brain * Human::identify(){
+Brain const * Human::identify(){
 	return &_brain;
 }

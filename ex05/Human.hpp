@@ -6,7 +6,7 @@
 /*   By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/25 00:50:48 by juligonz          #+#    #+#             */
-/*   Updated: 2021/01/25 01:29:59 by juligonz         ###   ########.fr       */
+/*   Updated: 2021/01/25 01:49:29 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,15 +19,14 @@
 class Human
 {
 private:
-	Brain _brain;
+	Brain const _brain;
 
 public:
 	Human();
 	~Human();
 
-	Brain & getBrain();
-
-	Brain * identify();
+	Brain const & getBrain();
+	Brain const * identify();
 };
 
 #endif

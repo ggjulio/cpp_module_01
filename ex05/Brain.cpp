@@ -6,7 +6,7 @@
 /*   By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/25 00:44:27 by juligonz          #+#    #+#             */
-/*   Updated: 2021/01/25 01:26:19 by juligonz         ###   ########.fr       */
+/*   Updated: 2021/01/25 01:54:54 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ Brain::~Brain(){
 	std::cout << "Brain Destroyed" << std::endl;
 }
 
-Brain * Brain::identify(){
+Brain const * Brain::identify() const{
 	return this;
 }
 
