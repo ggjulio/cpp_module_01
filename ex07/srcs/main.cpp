@@ -6,7 +6,7 @@
 /*   By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/25 03:08:05 by juligonz          #+#    #+#             */
-/*   Updated: 2021/01/26 00:01:14 by juligonz         ###   ########.fr       */
+/*   Updated: 2021/01/26 17:19:28 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void replace(std::ifstream & in, std::ofstream & out,
 	sstream << in.rdbuf();
 	s = sstream.str();
 	while ((found = s.find(to_find)) != std::string::npos)
-			s.replace(found, to_find.size(), new_str);
+		s.replace(found, to_find.size(), new_str);
 	out << s;
 }
 
@@ -36,7 +36,7 @@ int main(int ac, char **av)
 	std::ifstream in;
 	std::ofstream out;
 
-	if (ac == 4)
+	if (ac == 4 && !std::string(av[2]).empty())
 	{
 		in.open(av[1]);
 		if (in.is_open())
